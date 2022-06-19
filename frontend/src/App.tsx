@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Card from './components/Card';
+import Book from './components/Book';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -12,7 +12,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Card />
+      <Book />
     </AppContainer>
   );
 }
