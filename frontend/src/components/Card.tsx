@@ -16,12 +16,19 @@ const CardContainer = styled.div`
     align-items: center;
     gap: 16px;
     box-sizing: border-box;
+    border-left: 32px solid ${colors.primary};
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
 `
 
 const CuteImage = styled.img`
     margin: 20px 0;
+    /* height: 50%; */
+    flex-basis: 50%;
     max-height: 50%;
+    max-width: 95%;
     box-sizing: border-box;
+    border: 2px solid ${colors.border};
+    border-radius: 5px;
 `
 const CardTitle = styled.div`
     font-size: 2em;

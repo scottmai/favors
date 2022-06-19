@@ -6,6 +6,8 @@ import { TCard } from "../types";
 
 const BookContainer = styled.div`
     /* margin: 0 auto; */
+    width: 600px;
+    /* height: 600px; */
 `
 const Book = ({ cards }: { cards: TCard[] }) => {
     const flipBookRef = useRef(null);
