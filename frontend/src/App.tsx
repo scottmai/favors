@@ -12,7 +12,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Book />
+      <Book cards={[]} />
     </AppContainer>
   );
 }

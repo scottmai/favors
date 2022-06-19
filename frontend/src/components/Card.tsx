@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { TCard } from "../types"
 import RedeemButton from "./RedeemButton"
 
 const CardContainer = styled.div`
@@ -25,13 +26,10 @@ const CardTitle = styled.div`
     font-size: 2em;
 `
 
-interface Props {
-    title: string
-}
-const Card = (props: Props) => {
+const Card = ({ card }: { card: TCard }) => {
     return <CardContainer>
         <CuteImage src="https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g" />
-        <CardTitle>{props.title}</CardTitle>
+        <CardTitle>{card.title}</CardTitle>
         <RedeemButton />
     </CardContainer>
 }

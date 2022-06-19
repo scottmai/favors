@@ -2,11 +2,12 @@ import Card from "./Card";
 import HTMLFlipBook from 'react-pageflip';
 import styled from "styled-components";
 import { useRef } from "react";
+import { TCard } from "../types";
 
 const BookContainer = styled.div`
     /* margin: 0 auto; */
 `
-const Book = () => {
+const Book = ({ cards }: { cards: TCard[] }) => {
     const flipBookRef = useRef(null);
     return (
         <BookContainer>
@@ -27,18 +28,11 @@ const Book = () => {
             // onChangeOrientation={this.onChangeOrientation}
             // onChangeState={this.onChangeState}
             >
-                <div className="demoPage">hi</div>
-                <div className="demoPage">there</div>
-                <div>
-                    <Card title="Cute Dog" />
-                </div>
-                <div>
-                    <Card title="Cute Dog" />
-                </div>
-                <div>
-                    <Card title="Cute Dog" />
-                </div>
-
+                {cards.map((card, index) =>
+                    <div key={index}>
+                        <Card card={card} />
+                    </div>
+                )}
             </HTMLFlipBook>
         </BookContainer>
     );
