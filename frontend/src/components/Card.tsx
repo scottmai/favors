@@ -17,8 +17,16 @@ const CardContainer = styled.div`
     align-items: center;
     gap: 16px;
     box-sizing: border-box;
-    border-left: 32px solid ${colors.primary};
+    /* border-left: 32px solid ${colors.border}; */
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+`
+const Binder = styled.div`
+    position: absolute;
+    width: 32px;
+    background-color: ${colors.border};
+    height: 100%;
+    left: 0;
 `
 const Top = styled.div`
     flex: 1;
@@ -53,6 +61,7 @@ const CardTitle = styled.div`
 
 const Card = ({ card }: { card: TCard }) => {
     return <CardContainer>
+        <Binder />
         <Top>
             <CuteImage src="https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g" />
         </Top>
