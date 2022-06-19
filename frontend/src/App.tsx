@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 import Book from './components/Book';
+import { TCard } from './types';
+
+const dummyData: TCard[] = [
+  {
+    id: "1",
+    title: "Card 1",
+  },
+  {
+    id: "2",
+    title: "Card 2",
+  },
+  {
+    id: "3",
+    title: "Card 3",
+  },
+  {
+    id: "4",
+    title: "Card 4",
+  }
+]
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -10,9 +30,10 @@ const AppContainer = styled.div`
 `
 
 function App() {
+  const data = dummyData;
   return (
     <AppContainer>
-      <Book cards={[]} />
+      <Book cards={data} />
     </AppContainer>
   );
 }

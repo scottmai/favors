@@ -14,8 +14,8 @@ const Book = ({ cards }: { cards: TCard[] }) => {
             {/* @ts-ignore */}
             <HTMLFlipBook
                 ref={dis => flipBookRef.current = dis}
-                width={550}
-                height={733}
+                width={600}
+                height={800}
                 size="stretch"
                 minWidth={315}
                 maxWidth={1000}
