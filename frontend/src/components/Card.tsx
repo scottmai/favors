@@ -1,11 +1,12 @@
 import styled from "styled-components"
+import { colors } from "../constants"
 import { TCard } from "../types"
 import RedeemButton from "./RedeemButton"
 
 const CardContainer = styled.div`
     height: 100%;
     /* width: 60%; */
-    background-color: #e8cce7;
+    background-color: ${colors.secondary};
     @media screen and (max-width: 600px) {
         /* width: 80%; */
     }
