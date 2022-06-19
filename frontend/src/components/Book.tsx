@@ -7,6 +7,8 @@ import { TCard } from "../types";
 const BookContainer = styled.div`
     /* margin: 0 auto; */
     width: 600px;
+    margin: 20px;
+    /* box-sizing: border-box; */
     /* height: 600px; */
 `
 const Book = ({ cards }: { cards: TCard[] }) => {

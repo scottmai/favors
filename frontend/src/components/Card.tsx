@@ -24,7 +24,7 @@ const CardContainer = styled.div`
 const Binder = styled.div`
     position: absolute;
     width: 32px;
-    background-color: ${colors.border};
+    background-color: ${colors.primary};
     height: 100%;
     left: 0;
 `
