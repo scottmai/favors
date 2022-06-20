@@ -1,25 +1,10 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Book from './components/Book';
 import { TCard } from './types';
+import axios from 'axios';
 
-const dummyData: TCard[] = [
-  {
-    id: "1",
-    title: "Card 1",
-  },
-  {
-    id: "2",
-    title: "Card 2",
-  },
-  {
-    id: "3",
-    title: "Card 3",
-  },
-  {
-    id: "4",
-    title: "Card 4",
-  }
-]
+const dummyData: TCard[] = []
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -30,10 +15,18 @@ const AppContainer = styled.div`
 `
 
 function App() {
-  const data = dummyData;
+  const [vouchers, setVouchers] = useState([]);
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await axios.get('http://localhost:8000/vouchers');
+      console.log({ vouchers: response.data })
+      setVouchers(response.data);
+    }
+    fetch();
+  }, []);
   return (
     <AppContainer>
-      <Book cards={data} />
+      <Book cards={vouchers} />
     </AppContainer>
   );
 }

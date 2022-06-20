@@ -32,6 +32,13 @@ const Book = ({ cards }: { cards: TCard[] }) => {
             // onChangeOrientation={this.onChangeOrientation}
             // onChangeState={this.onChangeState}
             >
+                <div>
+                    <Card card={{
+                        id: 'cover',
+                        title: "Cover card",
+                        image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
+                    }} />
+                </div>
                 {cards.map((card, index) =>
                     <div key={index}>
                         <Card card={card} />

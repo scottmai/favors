@@ -1,6 +1,9 @@
 const express = require('express');
 const { initDatabase, getCollection } = require('./db');
+const cors = require('cors')
+
 const app = express();
+app.use(cors());
 
 app.get('/vouchers', async (req, res) => {
     const client = await initDatabase();
@@ -12,7 +15,7 @@ app.get('/vouchers', async (req, res) => {
         title: v.title,
         image: v.image,
     }))
-    console.log({ json })
+    // console.log({ json })
     res.json(json);
 });
 
