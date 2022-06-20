@@ -13,7 +13,7 @@ app.get('/vouchers', async (req, res) => {
         image: v.image,
     }))
     console.log({ json })
-    res.json({ vouchers: json });
+    res.json(json);
 });
 
 app.listen(8000, () => console.log('Example app is listening on port 8000.'));
