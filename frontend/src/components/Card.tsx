@@ -1,26 +1,9 @@
 import styled from "styled-components"
 import { colors } from "../constants"
 import { TCard } from "../types"
+import Background from "./Background"
 import RedeemButton from "./RedeemButton"
 
-const CardContainer = styled.div`
-    height: 100%;
-    /* width: 60%; */
-    /* background-color: ${colors.secondary}; */
-    background-image: url("https://img.freepik.com/free-vector/soft-purple-floral-with-watercolor-abstract-background_65186-1644.jpg?w=2000");
-    @media screen and (max-width: 600px) {
-        /* width: 80%; */
-    }
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    box-sizing: border-box;
-    /* border-left: 32px solid ${colors.border}; */
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
-    position: relative;
-`
 const Binder = styled.div`
     position: absolute;
     width: 32px;
@@ -60,8 +43,8 @@ const CardTitle = styled.div`
 `
 
 const Card = ({ card }: { card: TCard }) => {
-    return <CardContainer>
-        <Binder />
+    return <Background>
+        {/* <Binder /> */}
         <Top>
             <CuteImage src="https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g" />
         </Top>
@@ -69,7 +52,7 @@ const Card = ({ card }: { card: TCard }) => {
             <CardTitle>{card.title}</CardTitle>
             <RedeemButton />
         </Bottom>
-    </CardContainer>
+    </Background>
 }
 
 export default Card
