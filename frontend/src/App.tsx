@@ -4,8 +4,6 @@ import Book from './components/Book';
 import { TCard } from './types';
 import axios from 'axios';
 
-const dummyData: TCard[] = []
-
 const AppContainer = styled.div`
   height: 100vh;
   width: 100vw;
@@ -15,7 +13,7 @@ const AppContainer = styled.div`
 `
 
 function App() {
-  const [vouchers, setVouchers] = useState([]);
+  const [vouchers, setVouchers] = useState<TCard[]>([]);
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get('http://localhost:8000/vouchers');
