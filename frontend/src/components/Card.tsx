@@ -27,6 +27,7 @@ const Bottom = styled.div`
     height: 30%;
     width: 100%;
     gap: 16px;
+    padding-bottom: 20px;
 `
 const CuteImage = styled.img`
     display: block;

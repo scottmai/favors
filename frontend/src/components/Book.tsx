@@ -6,8 +6,8 @@ import { TCard } from "../types";
 
 const BookContainer = styled.div`
     /* margin: 0 auto; */
-    width: 600px;
-    margin: 20px;
+    /* width: 600px; */
+    margin: auto;
     /* box-sizing: border-box; */
     /* height: 600px; */
 `
