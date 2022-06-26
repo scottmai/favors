@@ -16,21 +16,25 @@ async function loadDb() {
             title: "1 free hug",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
+            is_redeemed: false,
         },
         {
             title: "2 free hug",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
+            is_redeemed: false,
         },
         {
             title: "3 free hug",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
+            is_redeemed: false,
         },
         {
             title: "4 free hug",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
+            is_redeemed: false,
         },
     ], options)
     console.log('inserted into db')

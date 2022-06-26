@@ -51,7 +51,7 @@ const Card = ({ card }: { card: TCard }) => {
         </Top>
         <Bottom>
             <CardTitle>{card.title}</CardTitle>
-            <RedeemButton />
+            <RedeemButton id={card.id} voucher={card} />
         </Bottom>
     </Background>
 }

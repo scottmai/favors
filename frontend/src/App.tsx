@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Book from './components/Book';
-import { TCard } from './types';
+import { TCard, TVoucherContext } from './types';
 import axios from 'axios';
+import { VOUCHERS_URL } from './constants';
+import React from 'react';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -10,22 +12,30 @@ const AppContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `
+
+export const VoucherContext = React.createContext<TVoucherContext>({} as TVoucherContext);
 
 function App() {
   const [vouchers, setVouchers] = useState<TCard[]>([]);
+
+  const fetchVouchers = useCallback(async () => {
+    const response = await axios.get(VOUCHERS_URL);
+    console.log({ vouchers: response.data })
+    setVouchers(response.data);
+  }, [setVouchers])
+
   useEffect(() => {
-    const fetch = async () => {
-      const response = await axios.get('http://localhost:8000/vouchers');
-      console.log({ vouchers: response.data })
-      setVouchers(response.data);
-    }
-    fetch();
-  }, []);
+    fetchVouchers();
+  }, [fetchVouchers]);
+
   return (
-    <AppContainer>
-      <Book cards={vouchers} />
-    </AppContainer>
+    <VoucherContext.Provider value={{ vouchers, setVouchers, fetchVouchers }}>
+      <AppContainer>
+        <Book />
+      </AppContainer>
+    </VoucherContext.Provider>
   );
 }
 
