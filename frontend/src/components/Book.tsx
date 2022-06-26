@@ -58,15 +58,17 @@ const Book = () => {
                         <Card card={voucher} />
                     </div>
                 )}
-                <InfoCard>
-                    More coming soon
-                    <br />
-                    <br />
-                    Feel free to drop suggestions :P
-                    <br />
-                    <br />
-                    I love youuuuuuu 😘
-                </InfoCard>
+                <div>
+                    <InfoCard>
+                        More coming soon
+                        <br />
+                        <br />
+                        Feel free to drop suggestions :P
+                        <br />
+                        <br />
+                        I love youuuuuuu 😘
+                    </InfoCard>
+                </div>
             </HTMLFlipBook>
         </BookContainer>
     );
