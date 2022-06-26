@@ -20,25 +20,12 @@ const Binder = styled.div`
     left: 0;
 `
 
-const InfoCard = () => {
+const InfoCard = ({ children }: { children: React.ReactNode }) => {
     return (
         <Background>
             <Binder />
             <Info>
-                A year ago today, you made me the luckiest person on earth.
-                <br />
-                And every day I am still awe-strucken by the compassion, wit, intelligence that you display so nonchalantly
-                <br />
-                <br />
-                I love you so much and I'd would give you the world
-                <br />
-                <br />
-                But until then, I made you some cute lil coupons that you can redeem any time you like :P
-                <br />
-                So that I can more easily show you just how much I love you
-                <br />
-                <br />
-                Happy Anniversay Dhiv Dhivs 😘
+                {children}
             </Info>
         </Background>
     )

@@ -13,13 +13,19 @@ async function loadDb() {
 
     await collection.insertMany([
         {
-            title: "1 free hug",
+            title: "One(1) Discord Kiss 😘",
+            image: "https://c.tenor.com/XxeAtG5jd8sAAAAM/milk-and-mocha-bear-kiss.gif",
+            recipient: 'dhivs',
+            is_redeemed: false,
+        },
+        {
+            title: "One(1) Hug",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
             is_redeemed: false,
         },
         {
-            title: "2 free hug",
+            title: "One(1) Python Script (that does anything you like)",
             image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
             recipient: 'dhivs',
             is_redeemed: false,

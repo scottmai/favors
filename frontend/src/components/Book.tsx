@@ -36,13 +36,37 @@ const Book = () => {
             // onChangeState={this.onChangeState}
             >
                 <div>
-                    <InfoCard />
+                    <InfoCard>
+                        A year ago today, you made me the luckiest person on earth.
+                        <br />
+                        And every day I am still awe-strucken by the compassion, wit, intelligence that you display so nonchalantly
+                        <br />
+                        <br />
+                        I love you so much and I'd would give you the world
+                        <br />
+                        <br />
+                        But until then, I made you some cute lil coupons that you can redeem any time you like :P
+                        <br />
+                        So that I can more easily show you just how much I love you
+                        <br />
+                        <br />
+                        Happy Anniversay Dhiv Dhivs 😘
+                    </InfoCard>
                 </div>
                 {vouchers.map((voucher, index) =>
                     <div key={voucher.id}>
                         <Card card={voucher} />
                     </div>
                 )}
+                <InfoCard>
+                    More coming soon
+                    <br />
+                    <br />
+                    Feel free to drop suggestions :P
+                    <br />
+                    <br />
+                    I love youuuuuuu 😘
+                </InfoCard>
             </HTMLFlipBook>
         </BookContainer>
     );
