@@ -7,6 +7,6 @@ export const colors = {
     border: '#A06CB0',
 }
 
-export const API_URL = 'http://localhost:8000'
+export const API_URL = 'http://localhost:' + (process.env.PORT || 8000)
 export const VOUCHERS_URL = API_URL + '/vouchers'
 export const REDEEM_URL = API_URL + '/redeem'

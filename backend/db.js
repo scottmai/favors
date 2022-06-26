@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
-MONGO_URL = 'mongodb://localhost:27017';
+MONGO_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 const DB_NAME = 'dhivsdb';
 const COLLECTION_NAME = 'vouchers';
 

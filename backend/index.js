@@ -36,4 +36,4 @@ app.post('/redeem/:id', async (req, res) => {
     res.json({})
 });
 
-app.listen(8000, () => console.log('Example app is listening on port 8000.'));
+app.listen(process.env.PORT || 8000, () => console.log('Example app is listening on port ' + (process.env.PORT || '8000')));
