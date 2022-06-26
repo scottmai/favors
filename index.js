@@ -17,6 +17,7 @@ app.get('/vouchers', async (req, res) => {
         id: String(v._id),
         title: v.title,
         image: v.image,
+        is_redeemed: v.is_redeemed,
     }))
     // console.log({ json })
     client.close();
