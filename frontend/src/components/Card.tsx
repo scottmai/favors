@@ -24,6 +24,7 @@ const Bottom = styled.div`
 `
 const CuteImage = styled.img`
     display: block;
+    background-color: white;
     max-height: 100%;
     max-width: 60%;
     width: auto;
@@ -33,7 +34,8 @@ const CuteImage = styled.img`
     border-radius: 5px;
 `
 const CardTitle = styled.div`
-    font-size: 2em;
+    font-size: 1.5em;
+    text-align: center;
 `
 const CheckMark = styled.img`
     width: 100px;
@@ -47,7 +49,7 @@ const Card = ({ card }: { card: TCard }) => {
         {/* <Binder /> */}
         {card.is_redeemed && <CheckMark src={checkmark} />}
         <Top>
-            <CuteImage src="https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g" />
+            <CuteImage src={card.image} />
         </Top>
         <Bottom>
             <CardTitle>{card.title}</CardTitle>

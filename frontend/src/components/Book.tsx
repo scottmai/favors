@@ -53,12 +53,12 @@ const Book = () => {
                         Happy Anniversay Dhiv Dhivs 😘
                     </InfoCard>
                 </div>
-                {vouchers.map((voucher, index) =>
+                {vouchers.map((voucher) =>
                     <div key={voucher.id}>
                         <Card card={voucher} />
                     </div>
                 )}
-                <div>
+                {/* <div>
                     <InfoCard>
                         More coming soon
                         <br />
@@ -68,7 +68,7 @@ const Book = () => {
                         <br />
                         I love youuuuuuu 😘
                     </InfoCard>
-                </div>
+                </div> */}
             </HTMLFlipBook>
         </BookContainer>
     );

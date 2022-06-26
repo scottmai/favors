@@ -24,8 +24,6 @@ const Button = styled.button`
 const RedeemButton = ({ id, voucher }: { id: string, voucher: TCard }) => {
     const { vouchers, setVouchers, fetchVouchers } = useContext(VoucherContext);
 
-    console.log({ voucher })
-
     const onClick = async () => {
         const newVoucher = {
             ...voucher,
