@@ -3,11 +3,13 @@ import HTMLFlipBook from 'react-pageflip';
 import styled from "styled-components";
 import { useContext, useRef } from "react";
 import { VoucherContext } from "../App";
+import InfoCard from "./InfoCard";
 
 const BookContainer = styled.div`
     /* margin: 0 auto; */
     /* width: 600px; */
     margin: auto;
+    /* height: 80%; */
     /* box-sizing: border-box; */
     /* height: 600px; */
 `
@@ -34,12 +36,7 @@ const Book = () => {
             // onChangeState={this.onChangeState}
             >
                 <div>
-                    <Card card={{
-                        id: 'cover',
-                        title: "Cover card",
-                        image: "https://media4.giphy.com/media/IzXiddo2twMmdmU8Lv/200.webp?cid=ecf05e47429s622142lril7crmxgdw4flqxwvdv20pt6ns5y&rid=200.webp&ct=g",
-                        is_redeemed: true,
-                    }} />
+                    <InfoCard />
                 </div>
                 {vouchers.map((voucher, index) =>
                     <div key={voucher.id}>

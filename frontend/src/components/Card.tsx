@@ -5,13 +5,6 @@ import Background from "./Background"
 import RedeemButton from "./RedeemButton"
 import checkmark from './checkmark.png'
 
-const Binder = styled.div`
-    position: absolute;
-    width: 32px;
-    background-color: ${colors.primary};
-    height: 100%;
-    left: 0;
-`
 const Top = styled.div`
     flex: 1;
     display: flex;
