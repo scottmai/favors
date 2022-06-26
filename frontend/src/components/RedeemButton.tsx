@@ -15,9 +15,15 @@ const Button = styled.button`
     &:hover {
         background-color: ${colors.border};
     }
+    &:disabled {
+        cursor: default;
+        background-color: ${colors.border};
+    }
 `
 const RedeemButton = ({ id, voucher }: { id: string, voucher: TCard }) => {
     const { vouchers, setVouchers, fetchVouchers } = useContext(VoucherContext);
+
+    console.log({ voucher })
 
     const onClick = async () => {
         const newVoucher = {
@@ -36,7 +42,9 @@ const RedeemButton = ({ id, voucher }: { id: string, voucher: TCard }) => {
         await axios.post(REDEEM_URL + '/' + id)
         fetchVouchers()
     }
-    return <Button onClick={onClick}>Redeem Voucher</Button>
+
+    const text = voucher.is_redeemed ? 'Redeemed!' : 'Redeem Voucher'
+    return <Button onClick={onClick} disabled={voucher.is_redeemed}>{text}</Button>
 }
 
 export default RedeemButton;
