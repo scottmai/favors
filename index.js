@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 app.use(cors());
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 app.get('/vouchers', async (req, res) => {
     const client = await initDatabase();
