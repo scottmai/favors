@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 import styled from "styled-components"
 import { VoucherContext } from "../App";
 import { colors, REDEEM_URL } from "../constants";
@@ -38,6 +39,8 @@ const RedeemButton = ({ id, voucher }: { id: string, voucher: TCard }) => {
         const newVouchers = [...vouchers]
         newVouchers[idx] = newVoucher
         setVouchers(newVouchers)
+
+        toast("Voucher redeemed! Scottie has been notified :) Love u 😘")
 
         await axios.post(REDEEM_URL + '/' + id)
         fetchVouchers()

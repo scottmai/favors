@@ -5,6 +5,8 @@ import { TCard, TVoucherContext } from './types';
 import axios from 'axios';
 import { VOUCHERS_URL } from './constants';
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -35,6 +37,7 @@ function App() {
       <AppContainer>
         <Book />
       </AppContainer>
+      <ToastContainer position="bottom-right" />
     </VoucherContext.Provider>
   );
 }
