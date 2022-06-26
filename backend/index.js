@@ -28,7 +28,7 @@ app.post('/redeem/:id', async (req, res) => {
 
     const client = await initDatabase();
     const collection = await getCollection(client);
-    const result = await collection.updateOne({ _id: ObjectId(voucherId) }, { $set: { is_redeemed: true } })
+    const result = await collection.updateOne({ recipient: 'dhivs', _id: ObjectId(voucherId) }, { $set: { is_redeemed: true } })
     console.log(
         `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
     );
